@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+	  <meta name="google-site-verification" content="FtAzAwDi92L4e5pQPEw6AmoOwL8oxH96xdn9H2Cv5TQ" />
+    <!-- Generateur de reperage - Version reperage -->
+    <meta charset="utf-8">
+    <meta name="author" content="Patrick CARDONA" />
+    <meta name="copyright" content="Patrick CARDONA" />
+    
+    <title>Générateur de Repérage</title>
+    
+    <!-- Feuille de style du menu -->
+    <link href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="public/css/zebra_dialog.css" />
+    <link rel="stylesheet" type="text/css" href="generateur/css/menu.css" />
+    
+    <!-- Feuilles de style partagées -->
+    <link rel="stylesheet" type="text/css" href="lib/css/apropos.css" />
+    
+    <!-- Feuilles de style liées à cette page -->
+    <link rel="stylesheet" type="text/css" href="generateur/css/generateur.css" />
+       
+  </head>
+  <body style="font-size:80%;">
+	   
+<!-- Si Javascript n'est pas autorisé -->
+<noscript>
+	<h1>Erreur !</h1>
+	<p>Votre navigateur ne prend pas en charge l'exécution de scripts. 
+		<br />Veuillez autoriser l'exécution de JavaScript et recharger cette application.</p>
+</noscript>
+
+<section> 
+<!-- menu déroulant -->
+<nav id="menu">
+	
+	<ul id="MenuDeroulant">
+				
+				<!-- <li><a href="#" title="Présentation" id="menu_accueil">Accueil</a></li> -->
+				<li><a href="#">Actions <img src="generateur/img/fleche-bas.png" alt="flèche" align="bottom" /></a>
+					<ul>
+						<li><a href="#" title="Nouveau">Nouvel exercice&hellip;</a></li>
+						<li><a href="#" title="Modifier">Ouvrir...</a></li>
+						<li><a href="#" title="Importer">Importer...</a></li>
+						<li><a href="#" title="Exerciseur">Exerciseur de Repérage</a></li>
+						<li><a href="http://jreperage.free.fr/exemple/reperage.html" target="_blank" title="Exemple de reperage">Exemple de reperage</a></li>
+						
+					</ul>
+				</li>
+				<li><a href="#">Liens &hellip; <img src="generateur/img/fleche-bas.png" alt="flèche" align="bottom" /></a>
+					<ul>
+						<li><a href="http://peazip.sourceforge.net/" target="_blank">Peazip</a></li>
+					</ul>	
+						
+				
+				</li>
+				<li><a href="#">À propos <img src="generateur/img/fleche-bas.png" alt="flèche" align="bottom" /></a>
+					<ul>
+						<li><a href="#" title="apropos">Repérage&hellip;</a></li>
+						<li><a href="#" title="Licence" rel="jslicense">Licence</a></li>
+						<li><a href="http://code.google.com/p/reperage/" target="_blank">Code source, problèmes connus&hellip;</a></li>
+					</ul>
+				</li>
+				
+				<li><a href="#" title="Contact">Contact</a></li>
+	</ul>
+	
+</nav>
+
+</section>
+
+<!-- Zone d'affichage des actions ou de l'aide -->
+<section id="actions">
+<div id="onglets">
+    <ul>
+        <li><a href="#fragment-1"><span>Actions</span></a></li>
+        <li><a href="#fragment-2"><span>Aide</span></a></li>
+    </ul>
+    
+    <div id="fragment-1">
+        
+        <div id="monAction">
+			
+		</div>
+		<div id="FinAction">
+			&nbsp;
+		</div>
+        
+    </div>
+    
+    <div id="fragment-2"> <!-- Onglet de l'aide -->
+  		
+  		<div id="accordeons">
+    		
+    	<h3>Introduction</h3>
+    	<div>
+    		<p>Repérage permet de créer des exercices interactifs de repérage dans un texte : 
+    			le but est de sélectionner les termes qui respectent une consigne donnée.</p> 
+			<p>Pour voir un exemple d'exercice de repérage : menu <em>Actions / Exemple de reperage</em>&nbsp;;</p>
+			<p>Le présent générateur, qui permet de créer les données textuelles de chaque type d'exercice, 
+			est une application Web en ligne ou intégrée à Chrome.</p>
+			<p>Pour créer un exercice de repérage : menu <em>Actions / Nouvel exercice&hellip;</em></p>
+			<p>À l'issue de cette saisie, les données du nouvel exercice seront automatiquement enregistrées 
+				dans l'espace privé de l'application, 
+				ainsi que disponibles sous forme d'un bloc de texte à récupérer dans un éditeur de texte.</p>
+			<p>Pour modifier un exercice précédent &nbsp; : menu <em>Actions / Editer&hellip;</em></p>
+		</div>
+    		
+    	<h3><a href="#">Principe</a></h3>
+    	<div>
+	    	<p>L'exercice s'exécute au moyen d'un fichier de données <em>data.json</em> et d'un exerciseur :
+			 le fichier d'interface <em>reperage.html</em>.</p>
+			<p>Pour créer le fichier de données <em>data.json</em>, vous devez utiliser le présent Générateur.</p>
+			<p>Vous téléchargerez ensuite une copie de l'exerciseur approprié, <em>reperage.zip</em>.</p>
+			<p>Pour publier votre exercice, vous décompresserez d'abord <em>reperage.zip</em>,
+			 vous copierez le fichier <em>data.json</em> dans le dossier décompressé <em>reperage</em>.</p>
+			<p>Le dossier de l'exercice, ainsi complété, sera finalement publié sur un serveur de 
+			cours et vous ferez finalement un lien vers le fichier <em>reperage.html</em>.</p>
+			<p>N.B.: Pour déplacer facilement le dossier complété, utilisez un logiciel
+			 d'archivage comme <em>7zip</em>. Vous penserez enfin à décompresser cette archive une fois qu'elle 
+			sera déposée sur le serveur.</p>
+		</div>
+    		
+    	<h3><a href="#">Pas à pas</a></h3>
+		<div>	
+			<p>1. Créez et récupérez le texte du fichier de données <em>data.json</em> grâce au Générateur.</p>
+			<p>2. Récupérez une copie de l'exerciseur Repérage <em>reperage.zip</em> et décompressez-la.</p>
+			<p>3. Copiez votre fichier <em>data.json</em> dans le dossier <em>reperage</em>.</p>
+			<p>4. Renommez le dossier <em>reperage</em> sous un nom plus explicite.</p>
+			<p>5. Créez une nouvelle archive <em>.zip</em> du dossier de reperage renommé.</p>
+			<p>6. Déposez cette archive <em>votre_reperage.zip</em> à l'endroit désiré sur le serveur de cours.</p>
+			<p>7. Décompressez l'archive <em>votre_reperage.zip</em> sur ce serveur. 
+			<br />Voyez à ce propos la documentation de votre plate-forme de cours ENT.</p>
+			<p>8. Faites enfin un lien vers le fichier <em>reperage.html</em>. 
+			<br />Voyez encore la documentation de votre plate-forme de cours ENT.</p>
+    	</div>
+    	
+    	<h3><a href="#">Découper le texte</a></h3>
+		<div>	
+			<p>Segmentez votre texte en insérant une étoile (*) entre chaque groupe ou mot à isoler.
+			<br />Vous pouvez aussi forcer un retour à la ligne dans l'exercice final en insérant le caractère dièse (#) 
+			devant chaque début de paragraphe envisagé.	
+			</p>
+			<p>Par exemple :
+				<br /><code>Terme un * terme deux * #Un nouveau paragraphe * terme quatre</code>	
+			</p>
+    	</div>
+    	
+    	<h3><a href="#">Choisir des termes</a></h3>
+		<div>	
+			<p>Une fois que le texte a été découpé, les termes se présentent sous forme de liste. 
+				Il suffit alors de cocher les options en face des termes qui respectent la consigne.</p>
+    	</div>
+    	
+    	<h3><a href="#">Enrichir le commentaire de fin d'exercice</a></h3>
+		<div>	
+			<p>Pour mettre en évidence une expression dans le commentaire final, placez deux caractères de soulignement (__) 
+				au début de l'expression et un seul caractère de soulignement pour achever cette mise en évidence. 
+				<br />Par exemple : <code>Ceci apparaîtra __en évidence_ dans le commentaire.</code>
+				
+    	</div>
+    		
+    	<h3>Modifier un exercice enregistré</h3>
+		<div>
+			<p>Menu <em>Actions / Editer</em> &hellip;</p>
+			<p>Pour afficher le détail, cliquez sur la loupe... <img src='generateur/img/loupe.png' align='bottom' /></p>
+			<p>Pour éditer un contenu, cliquez sur le crayon... <img src='generateur/img/editer.png' align='bottom' /></p>
+			<p>Pour supprimer un contenu, cliquez sur la corbeille... 
+			<img src='generateur/img/poubelle.png' align='bottom' /></p>
+    	</div>	
+    	
+    	<h3>Importer un exercice enregistré</h3>
+		<div>
+			<p>Ouvrez un fichier d'exercice (.json) dans un éditeur ou le bloc-notes.</p>
+			<p>Sélectionnez le contenu du fichier et copiez-le dans le presse-papier.</p>
+			<p>Dans le générateur : menu <em>Actions / Importer</em> &hellip;</p>
+			<p>Collez le code dans la zone de texte. Cliquez sur le bouton <em>Importer</em>.</p>
+    	</div>	
+    		
+    	<h3><a href="#">Récupérer le code généré</a></h3>	
+    	<div>
+			<p>Copiez ce code dans le presse-papier : <em>édition / copier</em>.</p>
+			<p>Ouvrez un fichier vierge dans un éditeur de texte : Bloc-Notes, TextEdit, etc.</p>
+			<p>Collez le contenu du presse-papier dans ce fichier : <em>édition / coller</em>.</p>
+			<p>Enregistrez ce fichier sous le nom : <em>data.json</em>.</p>
+			<p>Revenez dans le générateur de reperage.</p>
+			<p>Procurez-vous une copie de l'exerciseur, reperage : menu <em>Actions / Copie de cet exerciseur&hellip;</em>.</p>
+		</div>
+		
+		<h3><a href="#">Télécharger un exerciseur</a></h3>	
+    	<div>
+			<p>Obtenez une copie de l'exerciseur reperage <em>reperage.zip</em><br />
+	    	en cliquant sur le bouton prévu &nbsp; : menu <em>Actions / Exerciseur &hellip;</em></p>
+	    	<p>Décompressez cette archive. Vous obtenez un dossier &nbsp; : <em>reperage</em> &nbsp; ;</p>
+	    	<p>Déplacez-y le fichier <em>data.json</em>.</p>
+	    	<p>Pour publier cet exercice de Repérage sur un serveur, renommez, puis compressez à nouveau ce dossier 
+	    	<em>reperage</em> mis à jour.</p>
+		</div>
+	
+	
+		
+	</div> <!-- Fin accordéons -->
+  </div> <!-- Fin Onglet de l'aide -->
+</div> <!-- Fin onglets -->
+
+	
+	
+	
+<footer>
+	<!-- Pied de page initial -->
+	 <figure style="text-align: center">
+		<img src="generateur/img/icon_128.png" alt="Logo générateur de reperage" id="logo" />
+		<p id="copy">Repérage - © 2012 Patrick Cardona</p>
+	</figure>
+</footer>
+	
+			
+</section> <!-- Fin section des actions -->
+
+
+<!-- Libs JavaScript partagées -->
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+    <script src="public/js/zebra_dialog.js"></script>
+    <script src="generateur/js/menu.js"></script>
+    
+    <!-- Scripts communs -->
+    <script src="lib/js/apropos.js"></script>
+    <script src="lib/js/lic.js"></script>
+    
+    <!-- Scripts liés à cette page -->
+    <script src="generateur/js/fichiers.js"></script>
+    <script src="generateur/js/generateur.js"></script>
+    <script src="generateur/js/interface.js"></script>
+  
+  </body>
+</html>

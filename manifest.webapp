@@ -1,0 +1,18 @@
+
+{
+    "version": "2.1",
+    "name": "Repérage",
+    "description": "Générateur d'exercices de repérage dans un texte",
+    "developer": {
+        "name": "Patrick Cardona",
+        "url": "http://code.google.com/u/111418728371065641132/"
+    },
+    "installs_allowed_from": [
+        "*"
+    ],
+    "icons": {
+        "128": "icon_128.png"
+    }
+}
+
+
