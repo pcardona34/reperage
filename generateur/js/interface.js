@@ -426,7 +426,7 @@ $("input:submit").click(function(e){
 		
 		case "Télécharger une copie de cet exerciseur...":
 			
-    			window.location.href = "http://exercice-reperage.googlecode.com/files/exercice-reperage-210.zip";
+    			window.location.href = "https://github.com/pcardona34/exercice_reperage.html";
 			
 		break;
 		
