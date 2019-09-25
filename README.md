@@ -21,6 +21,10 @@ L'exerciseur et le générateur s'appuient uniquement sur la norme HTML5.
 
 Voyez le Wiki et l'aide fournie avec l'application pour de plus amples détails.
 
-## Générateur en ligne (ancienne version)
+## Générateur en ligne (version de transition)
 
-La nouvelle version n'est pas encore publiée. Voici l'ancienne version du [Générateur en ligne](http://jreperage.free.fr/), pour donner une idée du fonctionnement.
+La nouvelle version n'est pas encore publiée. Voici l'ancienne version adaptée à son nouvel hébergement sur Github : [Générateur en ligne](https://pcardona34.github.io/reperage/), pour donner une idée du fonctionnement.
+
+## Démo de l'exerciseur :
+
+Lien vers l'exerciseur lui aussi adapté à son nouvel hébergement : [Exerciseur](https://pcardona34.github.io/exercice_reperage/reperage.html)
