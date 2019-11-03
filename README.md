@@ -27,4 +27,4 @@ La nouvelle version n'est pas encore publiée. Voici l'ancienne version adaptée
 
 ## Démo de l'exerciseur :
 
-Lien vers l'exerciseur lui aussi adapté à son nouvel hébergement : [Exerciseur](https://pcardona34.github.io/exercice_reperage/reperage.html)
+Lien vers l'exerciseur dans sa nouvelle version : [Exerciseur](https://pcardona34.github.io/exercice_reperage/index.html)
